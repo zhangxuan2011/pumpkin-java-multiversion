@@ -27,3 +27,6 @@ phf = { version = "0.14.0", features = ["macros"] }
 [build-dependencies]
 pumpkin-nbt = { path = "pumpkin/crates/pumpkin-nbt", version = "0.2" }
 serde_json = "1.0"
+
+[target.'cfg(not(target_family = "wasm"))'.dependencies]
+pumpkin-world = { path = "pumpkin/crates/pumpkin-world", version = "0.2" }
